@@ -9,7 +9,6 @@ function handle(){
   bot.on("message", (msg)=> {console.log(msg.toAnsi());});
   bot.on("end", handle);
 }
-handle();
 
-app.get("/", (req, res) => {res.send("Handled");});
+app.get("/", (req, res) => {res.send("Handled");handle();});
 app.listen(5000)
