@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 function handle(){
-  const bot = mf.createBot({host: process.env.HOST, port: process.env.PORT, username: process.env.USERNAME, version: "1.19.2"});
+  const bot = mf.createBot({host: process.env.HOST??"kaboom.pw", port: process.env.PORT??25565, username: process.env.USERNAME??"LoggerExe", version: "1.19.2"});
 
   bot.on("login", () => {bot.chat("E");console.log("Joined! Logging server");});
   bot.on("message", (msg)=> {console.log(msg.toAnsi());});
