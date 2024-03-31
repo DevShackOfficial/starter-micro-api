@@ -10,5 +10,5 @@ function handle(){
   bot.on("end", handle);
 }
 
-app.get("/", (req, res) => {res.send("Handled");handle();});
+app.get("/", (req, res) => {res.send("Handled bot");handle();});
 app.listen(5000)
